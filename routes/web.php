@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\ShowNotes;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,4 +24,7 @@ Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
 
+Route::get('/notes', ShowNotes::class)
+    ->middleware(['auth', 'verified'])
+    ->name('notes.index');
 require __DIR__.'/auth.php';
