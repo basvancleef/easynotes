@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\CreateNote;
 use App\Livewire\ShowNotes;
 use Illuminate\Support\Facades\Route;
 
@@ -27,4 +28,8 @@ Route::view('profile', 'profile')
 Route::get('/notes', ShowNotes::class)
     ->middleware(['auth', 'verified'])
     ->name('notes.index');
+
+Route::get('/notes/create', CreateNote::class)
+    ->middleware(['auth', 'verified'])
+    ->name('notes.create');
 require __DIR__.'/auth.php';
