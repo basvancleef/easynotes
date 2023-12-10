@@ -38,7 +38,7 @@ $confirmPassword = function () {
 
 <div>
     <div class="mb-4 text-sm text-gray-600">
-        {{ __('This is a secure area of the application. Please confirm your password before continuing.') }}
+        This is a secure area of the application. Please confirm your password before continuing.
     </div>
 
     <form wire:submit="confirmPassword">
@@ -58,7 +58,7 @@ $confirmPassword = function () {
 
         <div class="flex justify-end mt-4">
             <x-primary-button>
-                {{ __('Confirm') }}
+                Confirm
             </x-primary-button>
         </div>
     </form>

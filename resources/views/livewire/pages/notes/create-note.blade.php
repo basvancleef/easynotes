@@ -1,20 +1,14 @@
-<x-slot name="header">
-    <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-        {{ __('Dashboard') }}
-    </h2>
-</x-slot>
-
 <div class="py-12">
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
             <div class="p-6 text-gray-900">
                 <header>
                     <h2 class="text-lg font-medium text-gray-900">
-                        {{ __('Create Note') }}
+                        Create Note
                     </h2>
 
                     <p class="mt-1 text-sm text-gray-600">
-                        {{ __("Add a note and it will be saved for you.") }}
+                        Add a note and it will be saved for you.
                     </p>
                 </header>
 
@@ -32,7 +26,7 @@
                     </div>
 
                     <div class="flex items-center gap-4">
-                        <x-primary-button>{{ __('Save') }}</x-primary-button>
+                        <x-primary-button>Save</x-primary-button>
                     </div>
                 </form>
             </div>

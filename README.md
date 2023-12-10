@@ -14,6 +14,7 @@ beheren, dat is EasyNotes!
 ### Technologies
 
 - **[Laravel](https://laravel.com/)**
+- **[Laravel Livewire](https://laravel-livewire.com/docs/2.x/quickstart)**
 - **[TailwindCSS](https://tailwindcss.com)**
 - **[MySQL](https://dev.mysql.com/doc/)**
 

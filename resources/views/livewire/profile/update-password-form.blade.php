@@ -42,11 +42,11 @@ $updatePassword = function () {
 <section>
     <header>
         <h2 class="text-lg font-medium text-gray-900">
-            {{ __('Update Password') }}
+            Update Password
         </h2>
 
         <p class="mt-1 text-sm text-gray-600">
-            {{ __('Ensure your account is using a long, random password to stay secure.') }}
+            Ensure your account is using a long, random password to stay secure.
         </p>
     </header>
 
@@ -70,10 +70,10 @@ $updatePassword = function () {
         </div>
 
         <div class="flex items-center gap-4">
-            <x-primary-button>{{ __('Save') }}</x-primary-button>
+            <x-primary-button>Save</x-primary-button>
 
             <x-action-message class="me-3" on="password-updated">
-                {{ __('Saved.') }}
+                Saved.
             </x-action-message>
         </div>
     </form>
