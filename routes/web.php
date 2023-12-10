@@ -2,7 +2,9 @@
 
 use App\Livewire\CreateNote;
 use App\Livewire\EditNote;
+use App\Livewire\EditUser;
 use App\Livewire\ShowNotes;
+use App\Livewire\ShowUsers;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,5 +39,14 @@ Route::get('/notes/create', CreateNote::class)
 Route::get('/notes/edit/{note}', EditNote::class)
     ->middleware(['auth', 'verified'])
     ->name('notes.edit');
+
+// TODO: Mogelijk route beveiligen met Laravel policy?
+Route::get('/users', ShowUsers::class)
+    ->middleware(['auth', 'verified'])
+    ->name('users.index');
+
+Route::get('/users/edit/{user}', EditUser::class)
+    ->middleware(['auth', 'verified'])
+    ->name('users.edit');
 
 require __DIR__.'/auth.php';
