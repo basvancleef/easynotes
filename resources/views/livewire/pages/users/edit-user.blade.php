@@ -16,8 +16,8 @@
                     </div>
 
                     <div>
-                        <label for="roles">Roles</label>
-                        <select wire:model="roles" name="roles" id="roles" required multiple>
+                        <label for="userRoles">Roles</label>
+                        <select wire:model="userRoles" name="userRoles" id="userRoles" required multiple>
                             @foreach($existingRoles as $role)
                                 <option value="{{ $role->id }}">{{ $role->name }}</option>
                             @endforeach

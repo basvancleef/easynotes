@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use App\Models\Role;
 use App\Models\User;
+use Livewire\Attributes\Rule;
 use Livewire\Component;
 
 class EditUser extends Component
@@ -14,19 +15,20 @@ class EditUser extends Component
     public $name = '';
 
     #[Rule('required')]
-    public $roles = [];
+    public $userRoles = [];
 
     public function mount(User $user)
     {
         $this->user = $user;
 
         $this->name  = $user->name;
-        $this->roles = $user->roles()->get();
+        $this->userRoles = $user->roles()->getPivotColumns();
     }
 
     public function save()
     {
-        $this->user->roles()->sync($this->roles);
+        $values = array_map('intval', $this->userRoles);
+        $this->user->roles()->sync($values);
 
         $this->user->update(
             $this->all()
