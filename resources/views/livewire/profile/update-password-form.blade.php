@@ -44,10 +44,6 @@ $updatePassword = function () {
         <h2 class="text-lg font-medium text-gray-900">
             Update Password
         </h2>
-
-        <p class="mt-1 text-sm text-gray-600">
-            Ensure your account is using a long, random password to stay secure.
-        </p>
     </header>
 
     <form wire:submit="updatePassword" class="mt-6 space-y-6">

@@ -30,6 +30,11 @@ $logout = function (Logout $logout) {
                     <x-nav-link :href="route('notes.index')" :active="request()->routeIs('notes.index')" wire:navigate>
                         Notes
                     </x-nav-link>
+                    @if(Auth::user()->roles()->where('name', 'Administrator')->exists())
+                        <x-nav-link :href="route('users.index')" :active="request()->routeIs('users.index')" wire:navigate>
+                            Users
+                        </x-nav-link>
+                    @endif
                 </div>
             </div>
 
@@ -80,10 +85,14 @@ $logout = function (Logout $logout) {
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" wire:navigate>
                 Dashboard
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('notes.index')" :active="request()->routeIs('notes.index')"
-                                   wire:navigate>
+            <x-responsive-nav-link :href="route('notes.index')" :active="request()->routeIs('notes.index')" wire:navigate>
                 Notes
             </x-responsive-nav-link>
+            @if(Auth::user()->roles()->where('name', 'Administrator')->exists())
+                <x-responsive-nav-link :href="route('users.index')" :active="request()->routeIs('users.index')" wire:navigate>
+                    Users
+                </x-responsive-nav-link>
+            @endif
         </div>
 
         <!-- Responsive Settings Options -->

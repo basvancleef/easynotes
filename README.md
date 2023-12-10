@@ -30,10 +30,6 @@ git clone git@github.com:basvancleef/easynotes.git
 - Run ``composer install``
 - Start server with ``php artisan serve``
 
-## Screenshots
-
-<hr>
-
 <p>Bas van Cleef<br>
 Student AVD Informatica<p>
 
